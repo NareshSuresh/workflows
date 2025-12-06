@@ -21,6 +21,6 @@ jobs:
 
       # Step 3: Use composite actions from the checked-out folder
       - name: Run Node Setup Action
-        uses: ./.github/actions/CentralizedRunners/node-setup@v0.1
+        uses: ./.github/actions/CentralizedRunners/node-setup
         with:
           node-version: 20
