@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: NareshSuresh/CentralizedRunners
+          ref: v0.1
           path: .github/actions/CentralizedRunners
 
       # Step 3: Use composite actions from the checked-out folder
