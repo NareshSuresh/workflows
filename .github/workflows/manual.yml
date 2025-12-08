@@ -28,4 +28,4 @@ jobs:
       - name: Run Python Setup Action
         uses: NareshSuresh/CentralizedRunners/python-setup@v0.3
         with:
-          python-version: 3.6
+          python-version: 3.10
