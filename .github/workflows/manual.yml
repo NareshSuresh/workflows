@@ -26,6 +26,6 @@ jobs:
           node-version: 20
 
       - name: Run Python Setup Action
-        uses: CentralizedRunners/python-setup@v0.2
+        uses: NareshSuresh/CentralizedRunners/python-setup@v0.2
         with:
           python-version: 3.6
