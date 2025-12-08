@@ -8,11 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout your repo
       - uses: actions/checkout@v4
 
-      # Step 2: Checkout central actions repo
-      # This is the key part — org is dynamic!
       - name: Checkout centralized actions repo
         uses: actions/checkout@v4
         with:
@@ -20,11 +17,14 @@ jobs:
           ref: v0.1
           path: .github/actions/CentralizedRunners
 
-      # Step 3: Use composite actions from the checked-out folder
+      - name: Verify action folders
+        run: ls -R .github/actions/CentralizedRunners
+
       - name: Run Node Setup Action
         uses: ./.github/actions/CentralizedRunners/node-setup
         with:
           node-version: 20
+
       - name: Run Python Setup Action
         uses: ./.github/actions/CentralizedRunners/python-setup
         with:
