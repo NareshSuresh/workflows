@@ -25,3 +25,7 @@ jobs:
         uses: ./.github/actions/CentralizedRunners/node-setup
         with:
           node-version: 20
+      - name: Run Python Setup Action
+        uses: ./.github/actions/CentralizedRunners/python-setup
+        with:
+          python-version: 3.6
